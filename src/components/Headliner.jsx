@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import catopiaLogo from '../assets/catopia-horizontal.svg'
 
+/** Styles */
 const HeadlinerContainer = styled.header`
     display: flex;
     background-color: ${({ theme }) => theme['blue2']};
@@ -14,6 +15,7 @@ const HeadlinerImage = styled.img`
     margin-left: 30px;
 `
 
+/** Render */
 const Headliner = () => {
     return (
         <HeadlinerContainer>
