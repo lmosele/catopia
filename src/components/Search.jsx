@@ -22,7 +22,7 @@ const SearchInput = styled.input`
     padding: 1em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
-    border: 1px solid ${({theme}) => theme['accent']};
+    border: 1px solid ${({theme}) => theme.colors['accent']};
     border-left: 0;
     font-size: 1.1em;
     width: 100%;
@@ -33,14 +33,14 @@ const SearchButton = styled.button`
     border-top-left-radius: 2em;
     border-bottom-left-radius: 2em;
     background-color: white;
-    border: 1px solid ${({theme}) => theme['accent']};
+    border: 1px solid ${({theme}) => theme.colors['accent']};
     border-right: 0;
     &:hover,
     &:active,
     &:focus {
         cursor: pointer;
         color: white;
-        background-color: ${({theme}) => theme['green']};
+        background-color: ${({theme}) => theme.colors['green']};
     }
 `;
 

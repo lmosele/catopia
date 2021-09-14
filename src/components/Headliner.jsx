@@ -5,7 +5,7 @@ import catopiaLogo from '../assets/catopia-horizontal.svg'
 /** Styles */
 const HeadlinerContainer = styled.header`
     display: flex;
-    background-color: ${({ theme }) => theme['blue2']};
+    background-color: ${({ theme }) => theme.colors['blue2']};
     width: 100%;
     height: 4.5em;
 `

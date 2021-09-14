@@ -13,7 +13,7 @@ const HeroContainer = styled.section`
     flex-direction: row;
     align-items: stretch;
     justify-content: space-evenly;
-    background-color: ${({ theme }) => theme['blueBg']};
+    background-color: ${({ theme }) => theme.colors['blueBg']};
     min-height: 320px;
 `;
 const Column = styled.div`
