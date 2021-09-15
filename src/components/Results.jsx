@@ -7,14 +7,12 @@ import ResultsList from './ResultsList';
 import Label from './common/Label'
 
 import chevronDown from '../assets/chevron-down.svg'
-
-import data from '../data.json';
-
+import catEmpty from '../assets/cat-stare.svg'
 
 /** Styles */
 const ResultsContainer = styled.section`
-    width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
     max-width: 1280px;
 `
 const ResultsFilters = styled.div`
@@ -24,6 +22,27 @@ const ResultsFilters = styled.div`
     margin: 30px auto;
     max-width: 1280px;
 `
+const EmptyState = styled.div`
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 500px;
+    background-image: url(${catEmpty});
+    background-repeat: no-repeat;
+    background-size: 200px;
+    &:before {
+        position: absolute;
+        bottom: 15%;
+        left: 15%;
+        font-family: inherit;
+        content: 'No Results';
+        font-weight: 900;
+        font-size: 2em;
+        color: ${({theme}) => theme.colors['blue2']};
+    }
+`
+
 const FilterCol = styled.div`
     display: flex;
     flex-direction: column;
@@ -87,9 +106,9 @@ const ViewButton = styled.button`
 `
 
 /** Render */
-const Results = () => {
+const Results = ({ data, onFilter, filterValue }) => {
     const [ isGrid, setIsGrid ] = useState(true);
-    const [ filterValue, setFilterValue ] = useState('all');
+    const hasData = data && data.length > 0;
 
     const handleSetGrid = () => {
         setIsGrid(true)
@@ -98,9 +117,9 @@ const Results = () => {
         setIsGrid(false)
     }
     const handleFilterChange = (e) => {
-        setFilterValue(e.target.value)
+        onFilter(e.target.value)
     }
-    console.log(filterValue)
+
     return (
         <ResultsContainer>
             {/* Filter & Layout Controls */}
@@ -110,7 +129,7 @@ const Results = () => {
                     <FilterSelectWrapper>
                         <select name="filter" id="filter" value={filterValue} onChange={handleFilterChange}>
                             <option value="toxic">Toxic</option>
-                            <option value="non-toxic">Non-Toxic</option>
+                            <option value="nontoxic">Non-Toxic</option>
                             <option value="all">Show All</option>
                         </select>
                     </FilterSelectWrapper>
@@ -125,7 +144,7 @@ const Results = () => {
             </ResultsFilters>
 
             {/* Grid & List Components */}
-            {isGrid ? <ResultsGrid data={data.plants} /> : <ResultsList data={data.plants} />}
+            {hasData ? isGrid ? <ResultsGrid data={data} /> : <ResultsList data={data} /> : <EmptyState />}
         </ResultsContainer>
     );
 }

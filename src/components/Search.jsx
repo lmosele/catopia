@@ -43,8 +43,8 @@ const SearchField = ({ onSearch }) => {
     const [ searchQuery, setSearchQuery ] = useState('')
 
     const handleSubmit = (e) => {
-        e.preventDefault();   
-        console.log(searchQuery)
+        e.preventDefault(); 
+        onSearch(searchQuery);
     }
 
     const handleInputChange = (e) => {

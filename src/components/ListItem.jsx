@@ -4,7 +4,12 @@ import styled from 'styled-components';
 import { H3, Span, P } from './common/Type';
 import Tag from './common/Tag';
 
-/** Styles */
+/** 
+ * Styles 
+ * Moved away from mockup here on purpose
+ * Items in mockup did not include any interactivity affordance
+ * So I preferred to make them more clearly interactive cards instead.
+*/
 const ListItemContainer = styled.li`
     display: flex;
     flex-direction: row;

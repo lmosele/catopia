@@ -39,7 +39,7 @@ const HeroImage = styled.img`
 `
 
 /** Render */
-const Hero = () => {
+const Hero = ({ onSearch }) => {
     return (
         <HeroContainer>
             <Column>
@@ -49,7 +49,7 @@ const Hero = () => {
             <Column className="center">
                 <H1>Can my cat eat that?</H1>
                 <Sub>Search and filter common house plants to see whats safe.</Sub>
-                <SearchField />
+                <SearchField onSearch={onSearch} />
             </Column>
 
             <Column>
