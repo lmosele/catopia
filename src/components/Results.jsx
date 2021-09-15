@@ -5,6 +5,7 @@ import { Grid, List } from 'react-feather';
 import ResultsGrid from './ResultsGrid';
 import ResultsList from './ResultsList';
 import Label from './common/Label'
+import { Span } from './common/Type'
 
 import chevronDown from '../assets/chevron-down.svg'
 import catEmpty from '../assets/cat-stare.svg'
@@ -125,6 +126,7 @@ const Results = ({ data, onFilter, filterValue }) => {
             {/* Filter & Layout Controls */}
             <ResultsFilters>
                 <FilterCol>
+                    <Span className="bold spaced">Toxicity</Span>
                     <Label htmlFor="filter">Filter between toxic and non-toxic plants</Label>
                     <FilterSelectWrapper>
                         <select name="filter" id="filter" value={filterValue} onChange={handleFilterChange}>
@@ -136,6 +138,7 @@ const Results = ({ data, onFilter, filterValue }) => {
                 </FilterCol>
 
                 <FilterCol>
+                    <Span className="bold spaced">View Options</Span>
                     <div>
                         <ViewButton className={isGrid && 'active'} onClick={handleSetGrid}><Grid /></ViewButton>
                         <ViewButton className={!isGrid && 'active'} onClick={handleSetList}><List /></ViewButton>

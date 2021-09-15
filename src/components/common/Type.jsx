@@ -45,6 +45,9 @@ export const Span = styled.span`
     font-size: 0.9em;
     font-weight: 300;
     color: ${({ theme }) => theme.colors['blue1']};
+    &.spaced {
+        margin-bottom: 15px;
+    }
     &.bold {
         font-weight: 500;
     }
