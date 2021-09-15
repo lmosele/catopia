@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Search } from 'react-feather';
 
+import Label from './common/Label'
+
 /** Styles */
 
 const SearchForm = styled.form`
@@ -9,14 +11,6 @@ const SearchForm = styled.form`
     width: 100%;
     max-width: 50em;
 `
-const SearchLabel = styled.label`
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-`;
 
 const SearchInput = styled.input`
     padding: 1em;
@@ -61,7 +55,7 @@ const SearchField = ({ onSearch }) => {
     return (
         <SearchForm onSubmit={handleSubmit}>
             {/* Screen Reader Only */}
-            <SearchLabel for="search">Search safe &amp; unsafe plants</SearchLabel>
+            <Label htmlFor="search">Search safe &amp; unsafe plants</Label>
 
             <SearchButton value="search">
                 <Search />

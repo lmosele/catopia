@@ -53,7 +53,7 @@
             }
         },
         {
-            "image": "chinese-evergreen.jpeg",
+            "image": "chinese-evergreen.png",
             "names": {
                 "common": "Chinese Evergreen",
                 "scientific": "Aglaonema"
@@ -153,7 +153,7 @@
             }
         },
         {   
-            "image": "parlor-palm.jpeg",
+            "image": "parlor-palm-plant.jpeg",
             "names": {
                 "common": "Parlor palm",
                 "scientific": "Chamaedorea elegans"
