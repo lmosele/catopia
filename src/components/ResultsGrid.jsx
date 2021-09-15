@@ -5,9 +5,9 @@ import GridItem from './GridItem';
 
 
 /** Styles */
-const GridContainer = styled.ul`
+const GridContainer = styled.div`
     display: grid;
-    margin: 30px 0 0 0;
+    margin: 30px 0;
     padding: 0;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -17,9 +17,10 @@ const GridContainer = styled.ul`
 const ResultsGrid = ({ data }) => {
     return (
         <GridContainer>
-            {data.map(({ image, names, toxicity }) => (
+            {data.map(({ image, names, toxicity, id }) => (
                 <GridItem 
-                    key={names.common} 
+                    key={id} 
+                    plantId={id}
                     image={image} 
                     commonName={names.common} 
                     toxicity={toxicity}

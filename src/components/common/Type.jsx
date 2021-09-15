@@ -26,8 +26,12 @@ export const Sub = styled.p`
 export const P = styled.p`
     font-size: 1em;
     font-weight: 400;
+    margin-top: 0;
     max-width: ${({ maxWidth }) => maxWidth || '100%'};
     color: ${({ theme }) => theme.colors['text']};
+    &.bold {
+        font-weight: 500;
+    }
     &.line {
         line-height: 2.5em;
         margin: 0 auto;

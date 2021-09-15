@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 import { H3, Span, P } from './common/Type';
 import Tag from './common/Tag';
@@ -10,14 +11,14 @@ import Tag from './common/Tag';
  * Items in mockup did not include any interactivity affordance
  * So I preferred to make them more clearly interactive cards instead.
 */
-const ListItemContainer = styled.li`
+const ListItemContainer = styled(Link)`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
     padding: 15px;
-    list-style: none;
+    text-decoration: none;
     background-color: white;
     border: 1px solid ${({theme}) => theme.colors['accent']};
     border-radius: 0.5em;
@@ -56,9 +57,9 @@ const ListContent = styled.div`
 `
 
 /** Render */
-const ListItem = ({ names, image, toxicity, details }) => {
+const ListItem = ({ names, image, toxicity, details, plantId }) => {
     return ( 
-        <ListItemContainer tabIndex={0} title={`See more information about ${names.common}`}>
+        <ListItemContainer to={`/plant/${plantId}`} tabIndex={0} title={`See more information about ${names.common}`}>
             <ListImage alt={names.common} src={`images/${image}`}  /> 
             <ListNames>
                 <H3>{names.common}</H3>

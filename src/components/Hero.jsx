@@ -24,6 +24,17 @@ const Column = styled.div`
     &.center {
         flex-grow: 1;
         align-self: center;
+        padding: 0 40px;
+    }
+    @media only screen and (max-width: 1024px) {
+        &.hide-md {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 780px) {
+        &.hide-sm {
+            display: none;
+        }
     }
 `
 const HeroImage = styled.img`
@@ -42,7 +53,7 @@ const HeroImage = styled.img`
 const Hero = ({ onSearch }) => {
     return (
         <HeroContainer>
-            <Column>
+            <Column className="hide-md">
                 <HeroImage className="leftCat" alt="Cute cat safely behind a Bird's Nest Fern" src={catLeft} />
             </Column>
 
@@ -52,7 +63,7 @@ const Hero = ({ onSearch }) => {
                 <SearchField onSearch={onSearch} />
             </Column>
 
-            <Column>
+            <Column className="hide-sm">
                 <HeroImage className="rightCat" alt="Cute cat next to a dangerous Monstera plant" src={catRight} />
             </Column>
         </HeroContainer>

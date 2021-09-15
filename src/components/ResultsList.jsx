@@ -6,15 +6,16 @@ import ListItem from './ListItem';
 
 /** Styles */
 const ListContainer = styled.ul`
-    margin: 30px 0 0 0;
+    margin: 30px 0;
     padding: 0;
 `
 /** Render */
 const ResultsGrid = ({ data }) => {
     return (
         <ListContainer>
-            {data.map(({ image, names, toxicity, details }) => (
+            {data.map(({ image, names, toxicity, details, id }) => (
                 <ListItem 
+                    plantId={id}
                     key={names.common} 
                     image={image} 
                     names={names} 

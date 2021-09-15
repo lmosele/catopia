@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 import { H3 } from './common/Type';
 import Tag from './common/Tag';
@@ -8,10 +9,10 @@ import leafLoader from '../assets/leaf-loader.svg'
 
 
 /** Styles */
-const GridItemContainer = styled.li`
+const GridItemContainer = styled(Link)`
     display: flex;
     flex-direction: column;
-    list-style: none;
+    text-decoration: none;
     margin: 0;
     overflow: hidden;
     background-color: white;
@@ -25,6 +26,9 @@ const GridItemContainer = styled.li`
         cursor: pointer;
         transition: 0.3s all ease-in-out;
         box-shadow: 5px 5px 13px 2px rgba(0,0,0,0.5);
+    }
+    @media only screen and (max-width: 780px) {
+        max-width: 100%
     }
 `
 
@@ -60,7 +64,7 @@ const GridContent = styled.footer`
 `
 
 /** Render */
-const GridItem = ({ commonName, image, toxicity }) => {
+const GridItem = ({ commonName, image, toxicity, plantId }) => {
     const [isLoaded, setLoaded] = useState(false);
 
     const handleLoaded = () => {
@@ -68,7 +72,7 @@ const GridItem = ({ commonName, image, toxicity }) => {
     }
 
     return ( 
-        <GridItemContainer tabIndex={0} title={`See more information about ${commonName}`}>
+        <GridItemContainer to={`/plant/${plantId}`} tabIndex={0} title={`See more information about ${commonName}`}>
             <GridImage className={!isLoaded && 'loading'} onLoad={handleLoaded} alt={commonName} src={`images/${image}`}  /> 
             <GridContent>
                 <H3>{commonName}</H3>

@@ -1,6 +1,7 @@
 {
     "plants": [
         {
+            "id": "aloe-vera",
             "image": "aloe-vera.jpeg",
             "names": {
                 "common": "Aloe",
@@ -17,6 +18,7 @@
             }
         },
         {
+            "id": "birds-nest-fern",
             "image": "birds-nest-fern.jpeg",
             "names": {
                 "common": "Bird’s nest fern",
@@ -29,6 +31,7 @@
             }
         },
         {   
+            "id": "boston-fern",
             "image": "boston-fern.jpeg",
             "names": {
                 "common": "Boston fern",
@@ -41,6 +44,7 @@
             }
         },
         {   
+            "id": "bromeliad",
             "image": "bromeliad.jpeg",
             "names": {
                 "common": "Bromeliad",
@@ -53,6 +57,7 @@
             }
         },
         {
+            "id": "chinese-evergreen",
             "image": "chinese-evergreen.png",
             "names": {
                 "common": "Chinese Evergreen",
@@ -69,6 +74,7 @@
             }
         },
         {
+            "id": "dracaena",
             "image": "dracaena.jpeg",
             "names": {
                 "common": "Dracaena",
@@ -85,6 +91,7 @@
             }
         },
         {
+            "id": "fiddle-leaf-fig",
             "image": "fiddle-leaf-fig.jpeg",
             "names": {
                 "common": "Fiddle-leaf fig",
@@ -101,6 +108,7 @@
             }
         },
         {   
+            "id": "haworthia",
             "image": "haworthia.jpeg",
             "names": {
                 "common": "Haworthia",
@@ -113,6 +121,7 @@
             }
         },
         {
+            "id": "jade-plant",
             "image": "jade-plant.jpeg",
             "names": {
                 "common": "Jade plant",
@@ -125,6 +134,7 @@
             }
         },
         {
+            "id":  "monstera",
             "image": "monstera.jpeg",
             "names": {
                 "common": "Monstera",
@@ -141,6 +151,7 @@
             }
         },
         {   
+            "id": "orchid",
             "image": "orchid.jpeg",
             "names": {
                 "common": "Orchid",
@@ -153,6 +164,7 @@
             }
         },
         {   
+            "id": "parlor-palm-plant",
             "image": "parlor-palm-plant.jpeg",
             "names": {
                 "common": "Parlor palm",
@@ -165,6 +177,7 @@
             }
         },
         {
+            "id": "peace-lily",
             "image": "peace-lily.jpeg",
             "names": {
                 "common": "Peace lily",
@@ -181,6 +194,7 @@
             }
         },
         {
+            "id": "philodendron",
             "image": "philodendron.jpeg",
             "names": {
                 "common": "Philodendron",
@@ -197,6 +211,7 @@
             }
         },
         {   
+            "id": "ponytail-palm",
             "image": "ponytail-palm.jpeg",
             "names": {
                 "common": "Ponytail palm",
@@ -209,6 +224,7 @@
             }
         },
         {
+            "id": "pothos",
             "image": "pothos.jpeg",
             "names": {
                 "common": "Pothos",
@@ -225,6 +241,7 @@
             }
         },
         {
+            "id": "rubber-tree",
             "image": "rubber-tree.jpeg",
             "names": {
                 "common": "Rubber tree",
@@ -241,6 +258,7 @@
             }
         },
         {
+            "id": "snake-plant",
             "image": "snake-plant.jpeg",
             "names": {
                 "common": "Snake plant",
@@ -257,6 +275,7 @@
             }
         },
         {
+            "id": "spider-plant",
             "image": "spider-plant.jpeg",
             "names": {
                 "common": "Spider plant",
@@ -269,6 +288,7 @@
             }
         },
         {
+            "id": "staghorn-fern",
             "image": "staghorn-fern.jpeg",
             "names": {
                 "common": "Staghorn fern",
